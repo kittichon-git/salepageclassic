@@ -1,6 +1,9 @@
 import { S1Hero } from "@/components/sections/S1Hero"
 import { S2Relevance } from "@/components/sections/S2Relevance"
 import { S3Mechanism } from "@/components/sections/S3Mechanism"
+import { S4Outcome } from "@/components/sections/S4Outcome"
+import { S5TrustFilter } from "@/components/sections/S5TrustFilter"
+import { S6WhatsInside } from "@/components/sections/S6WhatsInside"
 
 export default function Home() {
   return (
@@ -8,6 +11,9 @@ export default function Home() {
       <S1Hero />
       <S2Relevance />
       <S3Mechanism />
+      <S4Outcome />
+      <S5TrustFilter />
+      <S6WhatsInside />
     </main>
   )
 }
