@@ -23,7 +23,10 @@ export function S7Instructor() {
             <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
               {/* Avatar initials */}
               <div className="shrink-0 mx-auto md:mx-0">
-                <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-brand-primary text-white flex items-center justify-center font-heading font-black text-3xl md:text-4xl shadow-md">
+                <div
+                  aria-label={INSTRUCTOR.name}
+                  className="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-brand-primary text-white flex items-center justify-center font-heading font-black text-3xl md:text-4xl shadow-md"
+                >
                   {INSTRUCTOR.initials}
                 </div>
               </div>

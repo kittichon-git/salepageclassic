@@ -1,25 +1,29 @@
 "use client"
 
-import { motion } from "framer-motion"
+import { motion, useReducedMotion } from "framer-motion"
 import type { ReactNode } from "react"
 
-const initial = { opacity: 0, y: 24 }
-const whileInView = { opacity: 1, y: 0 }
-const viewport = { once: true, margin: "-80px" as const }
-
-export function ScrollReveal({
-  children,
-  delay = 0,
-}: {
+type Props = {
   children: ReactNode
   delay?: number
-}) {
+  duration?: number
+}
+
+const viewport = { once: true, margin: "-80px" }
+
+export function ScrollReveal({ children, delay = 0, duration = 0.5 }: Props) {
+  const reduce = useReducedMotion()
+
+  if (reduce) {
+    return <>{children}</>
+  }
+
   return (
     <motion.div
-      initial={initial}
-      whileInView={whileInView}
+      initial={{ opacity: 0, y: 24 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={viewport}
-      transition={{ duration: 0.5, delay, ease: "easeOut" }}
+      transition={{ duration, delay, ease: [0.21, 0.47, 0.32, 0.98] as const }}
     >
       {children}
     </motion.div>

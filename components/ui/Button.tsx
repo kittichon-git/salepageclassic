@@ -27,7 +27,7 @@ type Props = {
 
 export function Button({ children, variant = "primary", size = "md", href, className }: Props) {
   const cls = clsx(
-    "inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors",
+    "inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary focus-visible:ring-offset-2",
     variants[variant],
     sizes[size],
     className,
