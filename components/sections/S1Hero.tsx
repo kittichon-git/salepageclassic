@@ -1,0 +1,48 @@
+import { ArrowRight } from "lucide-react"
+import { Container } from "@/components/ui/Container"
+import { Button } from "@/components/ui/Button"
+import { ScrollReveal } from "@/components/shared/ScrollReveal"
+import { HERO } from "@/lib/data"
+
+export function S1Hero() {
+  const line1 = HERO.headline[0]
+  const line2 = HERO.headline[1]
+  const highlight = HERO.highlight
+  const parts = line2.split(highlight)
+
+  return (
+    <section className="pt-20 pb-16 md:pt-32 md:pb-24">
+      <Container>
+        <ScrollReveal>
+          <div className="max-w-4xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.15] tracking-tight mb-6">
+              <span className="block">{line1}</span>
+              <span className="block">
+                {parts[0]}
+                <span className="italic text-[var(--color-brand-primary)]">
+                  {highlight}
+                </span>
+                {parts[1] ?? ""}
+              </span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-8 max-w-2xl mx-auto">
+              {HERO.sub}
+            </p>
+
+            <div className="flex flex-col items-center gap-4">
+              <Button variant="line" size="lg" href={HERO.ctaHref}>
+                {HERO.ctaText}
+                <ArrowRight size={20} />
+              </Button>
+
+              <p className="text-sm text-[var(--color-text-muted)]">
+                {HERO.trust}
+              </p>
+            </div>
+          </div>
+        </ScrollReveal>
+      </Container>
+    </section>
+  )
+}
