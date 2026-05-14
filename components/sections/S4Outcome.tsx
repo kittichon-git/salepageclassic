@@ -18,21 +18,21 @@ export function S4Outcome() {
           </div>
         </ScrollReveal>
 
-        {/* 4 Outcomes */}
-        <div className="max-w-3xl mx-auto mb-20">
-          <ul className="space-y-5">
-            {OUTCOMES.map((text, i) => (
-              <ScrollReveal key={i} delay={i * 0.08}>
-                <li className="flex items-start gap-4">
+        {/* 4 Outcomes — wrapped in card */}
+        <ScrollReveal>
+          <div className="max-w-3xl mx-auto mb-20 rounded-2xl bg-bg-card border-2 border-border-strong shadow-sm p-8 md:p-12">
+            <ul className="space-y-5">
+              {OUTCOMES.map((text, i) => (
+                <li key={i} className="flex items-start gap-4">
                   <span className="flex-shrink-0 mt-0.5 w-7 h-7 rounded-full bg-brand-primary-soft flex items-center justify-center">
                     <Check size={14} strokeWidth={3} className="text-brand-primary" />
                   </span>
                   <span className="text-lg text-text-primary leading-relaxed">{text}</span>
                 </li>
-              </ScrollReveal>
-            ))}
-          </ul>
-        </div>
+              ))}
+            </ul>
+          </div>
+        </ScrollReveal>
 
         {/* Divider */}
         <ScrollReveal>

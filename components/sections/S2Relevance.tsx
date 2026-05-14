@@ -9,13 +9,16 @@ export function S2Relevance() {
     <section className="py-20 md:py-30 bg-bg-surface">
       <Container>
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-10">
             <SectionEyebrow>S2 / RELEVANCE</SectionEyebrow>
-
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-10">
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight">
               หน้านี้สำหรับคุณ ถ้า...
             </h2>
+          </div>
+        </ScrollReveal>
 
+        <ScrollReveal delay={0.1}>
+          <div className="max-w-3xl mx-auto rounded-2xl bg-bg-card border-2 border-border-strong shadow-sm p-8 md:p-12">
             <ul className="space-y-5">
               {RELEVANCE.map((text, i) => (
                 <li key={i} className="flex items-start gap-4">

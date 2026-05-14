@@ -11,10 +11,10 @@ export function S1Hero() {
   const parts = line2.split(highlight)
 
   return (
-    <section className="pt-20 pb-16 md:pt-32 md:pb-24">
+    <section className="py-20 md:py-30">
       <Container>
         <ScrollReveal>
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto rounded-2xl bg-bg-card border-2 border-border-strong shadow-sm p-8 md:p-16 text-center">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.15] tracking-tight mb-6">
               <span className="block">{line1}</span>
               <span className="block">
