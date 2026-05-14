@@ -6,6 +6,9 @@ import { S5TrustFilter } from "@/components/sections/S5TrustFilter"
 import { S6WhatsInside } from "@/components/sections/S6WhatsInside"
 import { S7Instructor } from "@/components/sections/S7Instructor"
 import { S8OfferStack } from "@/components/sections/S8OfferStack"
+import { S9Guarantee } from "@/components/sections/S9Guarantee"
+import { S9FAQ } from "@/components/sections/S9FAQ"
+import { S10FinalCTA } from "@/components/sections/S10FinalCTA"
 
 export default function Home() {
   return (
@@ -18,6 +21,9 @@ export default function Home() {
       <S6WhatsInside />
       <S7Instructor />
       <S8OfferStack />
+      <S9Guarantee />
+      <S9FAQ />
+      <S10FinalCTA />
     </main>
   )
 }
