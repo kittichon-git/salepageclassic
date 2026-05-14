@@ -5,7 +5,7 @@ import { RELEVANCE } from "@/lib/data"
 
 export function S2Relevance() {
   return (
-    <section className="relative mb-7 border-2 border-text-primary bg-bg-card shadow-[5px_5px_0_rgba(26,26,26,0.50)]">
+    <section className="relative mb-7 border border-border-default bg-bg-card shadow-soft">
       <SectionEyebrow>S2 / RELEVANCE</SectionEyebrow>
       <div className="px-7 md:px-10 pt-12 pb-8 md:pb-10">
         <ScrollReveal>
@@ -17,7 +17,7 @@ export function S2Relevance() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[18px]">
           {RELEVANCE.map((text, i) => (
             <ScrollReveal key={i} delay={i * 0.06}>
-              <div className="h-full border-2 border-text-primary bg-bg-card shadow-[3px_3px_0_rgba(26,26,26,0.40)] p-5">
+              <div className="h-full border border-border-default bg-bg-surface shadow-soft p-5">
                 <div className="inline-flex items-center justify-center w-9 h-9 bg-brand-primary/15 text-brand-primary mb-3">
                   <Target size={22} strokeWidth={2.5} />
                 </div>

@@ -5,7 +5,7 @@ import { OUTCOMES, TESTIMONIALS } from "@/lib/data"
 
 export function S4Outcome() {
   return (
-    <section className="relative mb-7 border-2 border-text-primary bg-bg-card shadow-[5px_5px_0_rgba(26,26,26,0.50)]">
+    <section className="relative mb-7 border border-border-default bg-bg-card shadow-soft">
       <SectionEyebrow>S4 / OUTCOME PROOF</SectionEyebrow>
       <div className="px-7 md:px-10 pt-12 pb-8 md:pb-10">
         <ScrollReveal>
@@ -21,7 +21,7 @@ export function S4Outcome() {
               {OUTCOMES.map((text, i) => (
                 <div
                   key={i}
-                  className="flex items-start gap-3 border-2 border-text-primary/20 bg-[#eef8f4] p-[15px] font-bold"
+                  className="flex items-start gap-3 border border-border-default/20 bg-[#eef8f4] p-[15px] font-bold"
                 >
                   <Check size={20} className="text-success flex-none mt-0.5" strokeWidth={3} />
                   <span className="text-text-primary leading-[1.5]">{text}</span>
@@ -34,7 +34,7 @@ export function S4Outcome() {
           <div className="grid gap-3">
             {TESTIMONIALS.map((t, i) => (
               <ScrollReveal key={i} delay={i * 0.1}>
-                <figure className="border-2 border-text-primary bg-text-primary text-white shadow-[3px_3px_0_rgba(26,26,26,0.45)] p-5 m-0">
+                <figure className="border border-border-default bg-text-primary text-white shadow-soft p-5 m-0">
                   <blockquote className="text-white/95 text-base leading-[1.55] mb-3">
                     &ldquo;{t.quote}&rdquo;
                   </blockquote>

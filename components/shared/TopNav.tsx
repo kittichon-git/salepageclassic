@@ -1,13 +1,13 @@
 export function TopNav() {
   return (
     <nav
-      className="sticky top-3 z-20 flex items-center justify-between gap-4 px-4 py-3 mb-7 border-2 border-text-primary bg-bg-card/95 backdrop-blur-sm shadow-[4px_4px_0_rgba(26,26,26,0.65)]"
+      className="sticky top-3 z-20 flex items-center justify-between gap-4 px-4 py-3 mb-7 border border-border-default bg-bg-card/95 backdrop-blur-sm shadow-soft"
       aria-label="Sale page navigation"
     >
       {/* Brand badge — sharp, no radius */}
       <a
         href="#hero"
-        className="inline-flex items-center bg-text-primary text-white font-heading font-black text-sm uppercase tracking-widest px-3 py-2"
+        className="inline-flex items-center bg-text-primary/90 text-bg-base font-heading font-black text-sm uppercase tracking-widest px-3 py-2"
       >
         แค่เปลี่ยนคำ
       </a>

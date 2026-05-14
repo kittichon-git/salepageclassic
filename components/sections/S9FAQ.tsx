@@ -5,7 +5,7 @@ import { FAQ } from "@/lib/data"
 
 export function S9FAQ() {
   return (
-    <section id="faq" className="relative mb-7 border-2 border-text-primary bg-bg-card shadow-[5px_5px_0_rgba(26,26,26,0.50)]">
+    <section id="faq" className="relative mb-7 border border-border-default bg-bg-card shadow-soft">
       <SectionEyebrow>FAQ</SectionEyebrow>
       <div className="px-7 md:px-10 pt-12 pb-8 md:pb-10">
         <ScrollReveal>
@@ -17,7 +17,7 @@ export function S9FAQ() {
         <div className="grid gap-2.5">
           {FAQ.map((item, i) => (
             <ScrollReveal key={i} delay={i * 0.05}>
-              <details className="group border-2 border-text-primary bg-bg-card shadow-[2px_2px_0_rgba(26,26,26,0.45)]">
+              <details className="group border border-border-default bg-bg-card shadow-soft">
                 <summary className="flex items-center justify-between gap-4 px-4 py-4 cursor-pointer list-none select-none font-black">
                   <span className="text-text-primary text-base md:text-lg pr-2">{item.q}</span>
                   <ChevronDown

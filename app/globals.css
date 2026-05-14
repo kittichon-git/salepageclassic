@@ -1,51 +1,57 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-primary: #da7756;
-  --color-brand-primary-hover: #c4684a;
-  --color-brand-primary-soft: #f4c5b1;
-  --color-line-green: #00B900;
+  /* Backgrounds: warm cream layered */
+  --color-bg-deep: #e9e3d4;
+  --color-bg-base: #f2ecdd;
+  --color-bg-elevated: #f8f3e6;
+  --color-bg-surface: #ede7d6;
+  --color-bg-card: #f8f3e6;
+  --color-bg-card-hover: #faf6eb;
 
-  --color-bg-base: #f5f5f0;
-  --color-bg-elevated: #ffffff;
-  --color-bg-surface: #eaeae5;
-  --color-bg-card: #ffffff;
-  --color-bg-card-hover: #fafaf7;
+  /* Text: warm dark, not pure black */
+  --color-text-primary: #3a3530;
+  --color-text-secondary: #6e6a62;
+  --color-text-muted: #9c9890;
+  --color-text-inverse: #f2ecdd;
 
-  --color-text-primary: #1a1a1a;
-  --color-text-secondary: #555555;
-  --color-text-muted: #888888;
-  --color-text-inverse: #f5f5f0;
+  /* Borders: soft warm beige */
+  --color-border-subtle: #ddd5c1;
+  --color-border-default: #c5bca6;
+  --color-border-strong: #8c8472;
 
-  --color-success: #2e7d32;
-  --color-warning: #ed6c02;
-  --color-danger: #c62828;
+  /* Brand: coral (slightly tuned) */
+  --color-brand-primary: #d27355;
+  --color-brand-primary-hover: #b65c40;
+  --color-brand-primary-soft: #f0c4b0;
+  --color-line-green: #00b900;
 
-  --color-border-subtle: #e8e8e3;
-  --color-border-strong: #d4d4d4;
+  /* Functional */
+  --color-success: #4d8a5a;
+  --color-warning: #d18030;
+  --color-danger: #b85048;
 
+  /* Fonts (keep current) */
   --font-heading: var(--font-kanit), system-ui, sans-serif;
   --font-body: var(--font-bai-jamjuree), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 }
 
 html {
-  background: var(--color-bg-base);
+  background: var(--color-bg-deep);
   color: var(--color-text-primary);
 }
 
 body {
-  background: var(--color-bg-base);
+  background-color: var(--color-bg-deep);
+  background-image: radial-gradient(circle at 1px 1px, rgba(58, 53, 48, 0.025) 1px, transparent 0);
+  background-size: 42px 42px;
   color: var(--color-text-primary);
   font-family: var(--font-body);
   font-size: 15px;
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  background-image:
-    linear-gradient(90deg, rgba(26, 26, 26, 0.022) 1px, transparent 1px),
-    linear-gradient(rgba(26, 26, 26, 0.022) 1px, transparent 1px);
-  background-size: 42px 42px;
 }
 
 h1,
@@ -64,6 +70,15 @@ code,
 pre,
 kbd {
   font-family: var(--font-mono);
+}
+
+/* Soft elevation shadows — replaces solid offset */
+.shadow-soft {
+  box-shadow: 0 2px 8px rgba(58, 53, 48, 0.06), 0 1px 3px rgba(58, 53, 48, 0.04);
+}
+
+.shadow-elev {
+  box-shadow: 0 4px 12px rgba(58, 53, 48, 0.08), 0 2px 4px rgba(58, 53, 48, 0.05);
 }
 
 @media (prefers-reduced-motion: no-preference) {

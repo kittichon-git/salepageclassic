@@ -12,7 +12,7 @@ export function S1Hero() {
   return (
     <header
       id="hero"
-      className="relative mb-7 border-2 border-text-primary bg-bg-card shadow-[5px_5px_0_rgba(26,26,26,0.50)] overflow-hidden"
+      className="relative mb-7 border border-border-default bg-bg-card shadow-soft overflow-hidden"
     >
       {/* Subtle grid overlay */}
       <div
@@ -48,12 +48,12 @@ export function S1Hero() {
               {HERO.sub}
             </p>
 
-            {/* VSL callout — dark card */}
-            <div className="w-full mb-6 border-2 border-text-primary bg-text-primary text-white shadow-[3px_3px_0_rgba(218,119,86,0.85)] p-5">
+            {/* VSL callout — light coral tint */}
+            <div className="w-full mb-6 border border-brand-primary/30 bg-brand-primary/6 p-5">
               <div className="font-mono text-[11px] uppercase tracking-widest text-brand-primary font-black mb-2">
                 VSL 60 วินาที
               </div>
-              <p className="text-white/90 leading-relaxed text-sm md:text-base">
+              <p className="text-text-primary leading-relaxed text-sm md:text-base">
                 คนสองคนขายเซรั่มตัวเดียวกัน คนแรกเขียน 500 คำ ยอดเป็นศูนย์ คนที่สองเขียน 3 บรรทัด ขายร้อยออเดอร์ต่อวัน — ต่างกันที่ตรงไหน?
               </p>
             </div>
@@ -70,8 +70,8 @@ export function S1Hero() {
 
         {/* Right column — illustration placeholder */}
         <ScrollReveal delay={0.1}>
-          <div className="aspect-[4/3] border-2 border-text-primary bg-bg-surface shadow-[3px_3px_0_rgba(26,26,26,0.45)] flex flex-col items-center justify-center gap-3 p-6">
-            <div className="w-16 h-16 border-2 border-text-primary bg-bg-card flex items-center justify-center font-mono text-2xl font-black text-text-muted">
+          <div className="aspect-[4/3] border border-border-default bg-bg-surface shadow-soft flex flex-col items-center justify-center gap-3 p-6">
+            <div className="w-16 h-16 border border-border-default bg-bg-card flex items-center justify-center font-mono text-2xl font-black text-text-muted">
               📊
             </div>
             <p className="font-mono text-xs uppercase tracking-widest text-text-muted text-center">

@@ -6,11 +6,11 @@ import { FINAL_CTA } from "@/lib/data"
 export function S10FinalCTA() {
   return (
     <section
-      className="relative mb-7 border-2 border-text-primary bg-text-primary text-white shadow-[5px_5px_0_rgba(26,26,26,0.50)] overflow-hidden"
+      className="relative mb-7 border border-border-default bg-text-primary text-white shadow-soft overflow-hidden"
       aria-label="Final call to action"
     >
       {/* Eyebrow frame-tab — inline for dark section */}
-      <div className="absolute -top-4 left-5 z-10 bg-brand-primary text-white font-mono text-[11px] uppercase tracking-widest px-3 py-[7px] font-black">
+      <div className="absolute -top-4 left-5 z-10 bg-brand-primary text-bg-base font-mono text-[11px] uppercase tracking-widest px-3 py-[7px] font-black">
         S10 / ACTION
       </div>
 

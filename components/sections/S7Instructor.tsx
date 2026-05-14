@@ -4,7 +4,7 @@ import { INSTRUCTOR } from "@/lib/data"
 
 export function S7Instructor() {
   return (
-    <section className="relative mb-7 border-2 border-text-primary bg-bg-card shadow-[5px_5px_0_rgba(26,26,26,0.50)]">
+    <section className="relative mb-7 border border-border-default bg-bg-card shadow-soft">
       <SectionEyebrow>S7 / INSTRUCTOR</SectionEyebrow>
       <div className="px-7 md:px-10 pt-12 pb-8 md:pb-10">
         <ScrollReveal>
@@ -14,12 +14,12 @@ export function S7Instructor() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="border-2 border-text-primary bg-bg-card shadow-[3px_3px_0_rgba(26,26,26,0.40)] p-5 md:p-6 grid grid-cols-1 md:grid-cols-[160px_1fr] gap-6 items-center">
+          <div className="border border-border-default bg-bg-card shadow-soft p-5 md:p-6 grid grid-cols-1 md:grid-cols-[160px_1fr] gap-6 items-center">
             {/* Portrait */}
             <div className="flex-shrink-0 mx-auto md:mx-0">
               <div
                 aria-label={INSTRUCTOR.name}
-                className="w-[150px] h-[150px] border-2 border-text-primary bg-brand-primary text-white flex items-center justify-center font-heading font-black text-5xl shadow-[3px_3px_0_rgba(218,119,86,0.85)]"
+                className="w-[150px] h-[150px] border border-border-default bg-brand-primary text-white flex items-center justify-center font-heading font-black text-5xl shadow-soft"
               >
                 {INSTRUCTOR.initials}
               </div>
@@ -39,7 +39,7 @@ export function S7Instructor() {
                   {INSTRUCTOR.tags.map((t, i) => (
                     <span
                       key={i}
-                      className="border-2 border-text-primary bg-[#e8c56d] text-text-primary font-black text-sm px-2.5 py-1.5"
+                      className="border border-border-default bg-[#e8c56d] text-text-primary font-black text-sm px-2.5 py-1.5"
                     >
                       {t}
                     </span>

@@ -8,7 +8,7 @@ const fmt = (v: number) => v.toLocaleString("th-TH")
 
 export function S8OfferStack() {
   return (
-    <section id="offer" className="relative mb-7 border-2 border-text-primary bg-bg-card shadow-[5px_5px_0_rgba(26,26,26,0.50)]">
+    <section id="offer" className="relative mb-7 border border-border-default bg-bg-card shadow-soft">
       <SectionEyebrow>S8 / OFFER STACK</SectionEyebrow>
       <div className="px-7 md:px-10 pt-12 pb-8 md:pb-10">
         <ScrollReveal>
@@ -20,7 +20,7 @@ export function S8OfferStack() {
         <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-[18px] items-start">
           {/* Offer visual — placeholder */}
           <ScrollReveal>
-            <div className="aspect-[4/3] border-2 border-text-primary bg-bg-surface shadow-[3px_3px_0_rgba(26,26,26,0.45)] flex flex-col items-center justify-center gap-3 p-6">
+            <div className="aspect-[4/3] border border-border-default bg-bg-surface shadow-soft flex flex-col items-center justify-center gap-3 p-6">
               <span className="font-mono text-xs uppercase tracking-widest text-text-muted text-center">
                 Offer Stack<br />Value Cards<br />Illustration
               </span>
@@ -29,7 +29,7 @@ export function S8OfferStack() {
 
           {/* Price card */}
           <ScrollReveal delay={0.1}>
-            <div className="border-2 border-text-primary bg-bg-card shadow-[3px_3px_0_rgba(26,26,26,0.40)] p-5 md:p-6">
+            <div className="border border-border-default bg-bg-card shadow-soft p-5 md:p-6">
               {/* Offer list */}
               {OFFER.map((item, i) => (
                 <div
@@ -42,7 +42,7 @@ export function S8OfferStack() {
               ))}
 
               {/* Total */}
-              <div className="flex justify-between gap-3 py-3 text-xl font-bold border-b-2 border-text-primary">
+              <div className="flex justify-between gap-3 py-3 text-xl font-bold border-b border-border-default">
                 <span>รวมมูลค่า</span>
                 <strong className="font-mono">฿{fmt(PRICE.total)}</strong>
               </div>

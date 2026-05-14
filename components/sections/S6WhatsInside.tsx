@@ -6,7 +6,7 @@ import { MODULES, BONUS, HERO } from "@/lib/data"
 
 export function S6WhatsInside() {
   return (
-    <section id="whats-inside" className="relative mb-7 border-2 border-text-primary bg-bg-card shadow-[5px_5px_0_rgba(26,26,26,0.50)]">
+    <section id="whats-inside" className="relative mb-7 border border-border-default bg-bg-card shadow-soft">
       <SectionEyebrow>S6 / WHAT&apos;S INSIDE</SectionEyebrow>
       <div className="px-7 md:px-10 pt-12 pb-8 md:pb-10">
         <ScrollReveal>
@@ -23,7 +23,7 @@ export function S6WhatsInside() {
           >
             {MODULES.map((m, i) => (
               <ScrollReveal key={m.n} delay={i * 0.06}>
-                <div className="snap-start border-2 border-text-primary bg-bg-card shadow-[3px_3px_0_rgba(26,26,26,0.40)] p-5 min-h-[180px]">
+                <div className="snap-start border border-border-default bg-bg-surface shadow-soft p-5 min-h-[180px]">
                   <span className="inline-flex bg-brand-primary text-white font-mono font-black text-xs px-2 py-1 mb-3">
                     {m.n}
                   </span>
@@ -37,7 +37,7 @@ export function S6WhatsInside() {
 
         {/* Bonus strip — dark bg */}
         <ScrollReveal delay={0.2}>
-          <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-3.5 items-center border-2 border-text-primary bg-text-primary text-white shadow-[3px_3px_0_rgba(26,26,26,0.45)] p-5">
+          <div className="grid grid-cols-1 md:grid-cols-[auto_1fr_auto] gap-3.5 items-center border border-border-default bg-text-primary text-white shadow-soft p-5">
             <Sparkles size={22} className="text-brand-primary shrink-0" />
             <div>
               <p className="font-bold text-sm md:text-base leading-[1.55] text-white/90 mb-1">

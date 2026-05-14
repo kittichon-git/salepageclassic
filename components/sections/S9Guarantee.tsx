@@ -5,7 +5,7 @@ import { GUARANTEE } from "@/lib/data"
 
 export function S9Guarantee() {
   return (
-    <section className="relative mb-7 border-2 border-text-primary bg-bg-card shadow-[5px_5px_0_rgba(26,26,26,0.50)]">
+    <section className="relative mb-7 border border-border-default bg-bg-card shadow-soft">
       <SectionEyebrow>S9 / RISK REVERSAL</SectionEyebrow>
       <div className="px-7 md:px-10 pt-12 pb-8 md:pb-10">
         <ScrollReveal>
@@ -15,7 +15,7 @@ export function S9Guarantee() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="flex items-center gap-5 border-2 border-text-primary bg-[#eef8f4] shadow-[3px_3px_0_rgba(26,26,26,0.40)] p-5 md:p-6">
+          <div className="flex items-center gap-5 border border-border-default bg-[#eef8f4] shadow-soft p-5 md:p-6">
             <div className="relative shrink-0">
               <ShieldCheck size={36} className="text-success" strokeWidth={2} />
               <span className="absolute -bottom-2 -right-2 bg-bg-card text-brand-primary text-[10px] font-black border border-brand-primary/30 px-1.5 py-0.5 leading-none">
