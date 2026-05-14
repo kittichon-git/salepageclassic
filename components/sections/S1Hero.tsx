@@ -14,14 +14,12 @@ export function S1Hero() {
     <section className="py-20 md:py-30">
       <Container>
         <ScrollReveal>
-          <div className="max-w-4xl mx-auto rounded-2xl bg-bg-card border-2 border-border-strong shadow-sm p-8 md:p-16 text-center">
+          <div className="max-w-4xl mx-auto rounded-2xl bg-bg-card border-2 border-text-primary shadow-sm p-8 md:p-16 text-center">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-[1.15] tracking-tight mb-6">
               <span className="block">{line1}</span>
               <span className="block">
                 {parts[0]}
-                <span className="italic text-brand-primary">
-                  {highlight}
-                </span>
+                <span className="italic text-brand-primary">{highlight}</span>
                 {parts[1] ?? ""}
               </span>
             </h1>
@@ -30,15 +28,22 @@ export function S1Hero() {
               {HERO.sub}
             </p>
 
+            {/* VSL callout */}
+            <div className="max-w-2xl mx-auto mb-8 rounded-xl bg-brand-primary/8 border-2 border-text-primary p-5 text-left">
+              <div className="inline-block rounded bg-text-primary text-white font-mono text-[10px] uppercase tracking-widest px-2 py-1 font-bold mb-3">
+                VSL 60 วินาที
+              </div>
+              <p className="text-text-primary leading-relaxed">
+                คนสองคนขายเซรั่มตัวเดียวกัน คนแรกเขียน 500 คำ ยอดเป็นศูนย์ คนที่สองเขียน 3 บรรทัด ขายร้อยออเดอร์ต่อวัน — ต่างกันที่ตรงไหน?
+              </p>
+            </div>
+
             <div className="flex flex-col items-center gap-4">
               <Button variant="line" size="lg" href={HERO.ctaHref}>
                 {HERO.ctaText}
                 <ArrowRight size={20} />
               </Button>
-
-              <p className="text-sm text-text-muted">
-                {HERO.trust}
-              </p>
+              <p className="text-sm text-text-muted">{HERO.trust}</p>
             </div>
           </div>
         </ScrollReveal>

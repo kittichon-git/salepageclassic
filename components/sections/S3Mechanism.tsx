@@ -6,7 +6,7 @@ import { MECHANISM, MECHANISM_CLOSING } from "@/lib/data"
 
 export function S3Mechanism() {
   return (
-    <section className="py-20 md:py-30">
+    <section className="py-20 md:py-30 border-t-2 border-text-primary">
       <Container>
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto mb-12">

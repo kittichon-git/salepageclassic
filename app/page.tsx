@@ -12,7 +12,8 @@ import { S10FinalCTA } from "@/components/sections/S10FinalCTA"
 
 export default function Home() {
   return (
-    <main>
+    <>
+      <section id="top" />
       <S1Hero />
       <S2Relevance />
       <S3Mechanism />
@@ -24,6 +25,6 @@ export default function Home() {
       <S9Guarantee />
       <S9FAQ />
       <S10FinalCTA />
-    </main>
+    </>
   )
 }

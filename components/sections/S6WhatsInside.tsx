@@ -8,7 +8,7 @@ import { MODULES, BONUS, HERO } from "@/lib/data"
 
 export function S6WhatsInside() {
   return (
-    <section className="py-20 md:py-30">
+    <section id="whats-inside" className="py-20 md:py-30 border-t-2 border-text-primary">
       <Container>
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -41,7 +41,7 @@ export function S6WhatsInside() {
 
         {/* Bonus callout */}
         <ScrollReveal delay={0.2}>
-          <div className="max-w-4xl mx-auto rounded-2xl bg-brand-primary/10 border-2 border-brand-primary/30 p-8 md:p-10">
+          <div className="max-w-4xl mx-auto rounded-2xl bg-brand-primary/10 border-2 border-text-primary p-8 md:p-10">
             <div className="flex items-center gap-3 mb-5">
               <span className="w-9 h-9 rounded-full bg-brand-primary-soft flex items-center justify-center shrink-0">
                 <Gift size={20} className="text-brand-primary" />

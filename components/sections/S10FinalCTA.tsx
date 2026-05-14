@@ -6,7 +6,7 @@ import { FINAL_CTA } from "@/lib/data"
 
 export function S10FinalCTA() {
   return (
-    <section className="py-20 md:py-30">
+    <section className="py-20 md:py-30 border-t-2 border-text-primary">
       <Container>
         <ScrollReveal>
           <div className="relative max-w-5xl mx-auto rounded-2xl bg-brand-primary border-2 border-brand-primary-hover shadow-md overflow-hidden p-10 md:p-20">

@@ -10,7 +10,7 @@ const fmt = (v: number) => v.toLocaleString("th-TH")
 
 export function S8OfferStack() {
   return (
-    <section id="offer" className="py-20 md:py-30">
+    <section id="offer" className="py-20 md:py-30 border-t-2 border-text-primary">
       <Container>
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto mb-12">

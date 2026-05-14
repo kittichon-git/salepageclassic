@@ -6,7 +6,7 @@ import { GUARANTEE } from "@/lib/data"
 
 export function S9Guarantee() {
   return (
-    <section className="py-20 md:py-30">
+    <section className="py-20 md:py-30 border-t-2 border-text-primary">
       <Container>
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -18,7 +18,7 @@ export function S9Guarantee() {
         </ScrollReveal>
 
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto rounded-2xl bg-brand-primary/10 border-2 border-brand-primary/30 p-8 md:p-12 text-center">
+          <div className="max-w-3xl mx-auto rounded-2xl bg-brand-primary/10 border-2 border-text-primary p-8 md:p-12 text-center">
             {/* Days badge */}
             <div className="inline-flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full bg-brand-primary text-white mb-6 shadow-md relative">
               <ShieldCheck size={36} strokeWidth={2} />

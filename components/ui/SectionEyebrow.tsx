@@ -2,8 +2,10 @@ import type { ReactNode } from "react"
 
 export function SectionEyebrow({ children }: { children: ReactNode }) {
   return (
-    <p className="font-mono text-xs md:text-sm uppercase tracking-widest text-brand-primary font-semibold mb-3">
-      {children}
-    </p>
+    <div className="mb-4 md:mb-5">
+      <span className="inline-block rounded-lg bg-text-primary text-white font-mono text-xs uppercase tracking-widest px-3 py-1 font-bold">
+        {children}
+      </span>
+    </div>
   )
 }

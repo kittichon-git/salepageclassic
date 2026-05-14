@@ -7,7 +7,7 @@ import { OUTCOMES, TESTIMONIALS } from "@/lib/data"
 
 export function S4Outcome() {
   return (
-    <section className="py-20 md:py-30">
+    <section className="py-20 md:py-30 border-t-2 border-text-primary">
       <Container>
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -20,7 +20,7 @@ export function S4Outcome() {
 
         {/* 4 Outcomes — wrapped in card */}
         <ScrollReveal>
-          <div className="max-w-3xl mx-auto mb-20 rounded-2xl bg-bg-card border-2 border-border-strong shadow-sm p-8 md:p-12">
+          <div className="max-w-3xl mx-auto mb-20 rounded-2xl bg-bg-card border-2 border-text-primary shadow-sm p-8 md:p-12">
             <ul className="space-y-5">
               {OUTCOMES.map((text, i) => (
                 <li key={i} className="flex items-start gap-4">

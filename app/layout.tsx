@@ -1,5 +1,8 @@
 import type { Metadata, Viewport } from "next"
 import { Kanit, Bai_Jamjuree, JetBrains_Mono } from "next/font/google"
+import { PageFrame } from "@/components/shared/PageFrame"
+import { TopNav } from "@/components/shared/TopNav"
+import { StickyCTA } from "@/components/shared/StickyCTA"
 import "./globals.css"
 
 const kanit = Kanit({
@@ -45,14 +48,7 @@ export const metadata: Metadata = {
     siteName: "salepageclassic",
     title: TITLE,
     description: DESCRIPTION,
-    images: [
-      {
-        url: "/opengraph-image",
-        width: 1200,
-        height: 630,
-        alt: TITLE,
-      },
-    ],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: TITLE }],
   },
   twitter: {
     card: "summary_large_image",
@@ -63,19 +59,10 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
-  alternates: {
-    canonical: SITE_URL,
-  },
-  icons: {
-    icon: "/icon.svg",
-  },
+  alternates: { canonical: SITE_URL },
+  icons: { icon: "/icon.svg" },
 }
 
 export const viewport: Viewport = {
@@ -93,7 +80,13 @@ export default function RootLayout({
       lang="th"
       className={`${kanit.variable} ${baiJamjuree.variable} ${jetbrainsMono.variable}`}
     >
-      <body>{children}</body>
+      <body className="antialiased">
+        <PageFrame>
+          <TopNav />
+          {children}
+        </PageFrame>
+        <StickyCTA />
+      </body>
     </html>
   )
 }

@@ -1,4 +1,4 @@
-import { X } from "lucide-react"
+import { Target } from "lucide-react"
 import { Container } from "@/components/ui/Container"
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow"
 import { ScrollReveal } from "@/components/shared/ScrollReveal"
@@ -6,7 +6,7 @@ import { RELEVANCE } from "@/lib/data"
 
 export function S2Relevance() {
   return (
-    <section className="py-20 md:py-30 bg-bg-surface">
+    <section className="py-20 md:py-30 bg-bg-surface border-t-2 border-text-primary">
       <Container>
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto mb-10">
@@ -17,22 +17,20 @@ export function S2Relevance() {
           </div>
         </ScrollReveal>
 
-        <ScrollReveal delay={0.1}>
-          <div className="max-w-3xl mx-auto rounded-2xl bg-bg-card border-2 border-border-strong shadow-sm p-8 md:p-12">
-            <ul className="space-y-5">
-              {RELEVANCE.map((text, i) => (
-                <li key={i} className="flex items-start gap-4">
-                  <span className="flex-shrink-0 mt-0.5 w-7 h-7 rounded-full bg-red-100 flex items-center justify-center">
-                    <X size={14} strokeWidth={3} className="text-red-600" />
-                  </span>
-                  <span className="text-lg text-text-primary leading-relaxed">
-                    {text}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </ScrollReveal>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+          {RELEVANCE.map((text, i) => (
+            <ScrollReveal key={i} delay={i * 0.06}>
+              <div className="h-full rounded-xl bg-bg-card border-2 border-text-primary p-5 md:p-6">
+                <div className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-brand-primary/15 text-brand-primary mb-3">
+                  <Target size={18} strokeWidth={2.5} />
+                </div>
+                <p className="text-text-primary leading-relaxed text-sm md:text-base">
+                  {text}
+                </p>
+              </div>
+            </ScrollReveal>
+          ))}
+        </div>
       </Container>
     </section>
   )

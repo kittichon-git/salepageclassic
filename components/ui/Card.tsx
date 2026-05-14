@@ -6,7 +6,7 @@ export function Card({ children, className }: { children: ReactNode; className?:
     <div
       className={clsx(
         "bg-bg-card rounded-2xl p-6 md:p-8",
-        "border border-border-strong shadow-sm",
+        "border-2 border-text-primary shadow-sm",
         "hover:bg-bg-card-hover hover:shadow-md transition-all",
         className,
       )}

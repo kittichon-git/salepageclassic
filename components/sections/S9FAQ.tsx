@@ -6,7 +6,7 @@ import { FAQ } from "@/lib/data"
 
 export function S9FAQ() {
   return (
-    <section className="py-20 md:py-30 bg-bg-surface">
+    <section id="faq" className="py-20 md:py-30 bg-bg-surface border-t-2 border-text-primary">
       <Container>
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto mb-12">
@@ -20,7 +20,7 @@ export function S9FAQ() {
         <div className="max-w-3xl mx-auto space-y-3">
           {FAQ.map((item, i) => (
             <ScrollReveal key={i} delay={i * 0.05}>
-              <details className="group bg-bg-card border border-border-strong rounded-xl overflow-hidden">
+              <details className="group bg-bg-card border-2 border-text-primary rounded-xl overflow-hidden">
                 <summary className="flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer list-none select-none">
                   <span className="font-semibold text-text-primary text-base md:text-lg pr-2">
                     {item.q}

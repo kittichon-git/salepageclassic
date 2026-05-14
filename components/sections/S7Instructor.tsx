@@ -7,7 +7,7 @@ import { INSTRUCTOR } from "@/lib/data"
 
 export function S7Instructor() {
   return (
-    <section className="py-20 md:py-30 bg-bg-surface">
+    <section className="py-20 md:py-30 bg-bg-surface border-t-2 border-text-primary">
       <Container>
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto mb-12">
