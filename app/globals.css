@@ -1,46 +1,45 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand — Anthropic coral (จาก cc.aiflowlab.co --accent #da7756) */
   --color-brand-primary: #da7756;
   --color-brand-primary-hover: #c4684a;
   --color-brand-primary-soft: #f4c5b1;
   --color-line-green: #00B900;
 
-  /* Surfaces — LIGHT mode warm cream */
   --color-bg-base: #f5f5f0;
   --color-bg-elevated: #ffffff;
   --color-bg-surface: #eaeae5;
   --color-bg-card: #ffffff;
   --color-bg-card-hover: #fafaf7;
 
-  /* Text */
   --color-text-primary: #1a1a1a;
   --color-text-secondary: #555555;
   --color-text-muted: #888888;
   --color-text-inverse: #f5f5f0;
 
-  /* Semantic */
   --color-success: #2e7d32;
   --color-warning: #ed6c02;
   --color-danger: #c62828;
 
-  /* Borders */
   --color-border-subtle: #e8e8e3;
   --color-border-strong: #d4d4d4;
 
-  /* Typography — ตรง cc.aiflowlab.co */
-  --font-heading: var(--font-kanit), sans-serif;
-  --font-body: var(--font-bai-jamjuree), sans-serif;
-  --font-mono: var(--font-jetbrains-mono), monospace;
+  --font-heading: var(--font-kanit), system-ui, sans-serif;
+  --font-body: var(--font-bai-jamjuree), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 }
 
-html,
+html {
+  background: var(--color-bg-base);
+  color: var(--color-text-primary);
+}
+
 body {
   background: var(--color-bg-base);
   color: var(--color-text-primary);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 h1,
@@ -51,6 +50,13 @@ h5,
 h6 {
   font-family: var(--font-heading);
   letter-spacing: -0.01em;
+  font-weight: 700;
+}
+
+code,
+pre,
+kbd {
+  font-family: var(--font-mono);
 }
 
 @media (prefers-reduced-motion: no-preference) {

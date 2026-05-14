@@ -5,13 +5,10 @@ type Variant = "primary" | "secondary" | "ghost" | "line"
 type Size = "sm" | "md" | "lg"
 
 const variants: Record<Variant, string> = {
-  primary:
-    "bg-[var(--color-brand-primary)] text-white hover:bg-[var(--color-brand-primary-hover)]",
-  secondary:
-    "bg-[var(--color-bg-card)] text-[var(--color-text-primary)] border border-[var(--color-border-strong)] hover:bg-[var(--color-bg-card-hover)]",
-  ghost:
-    "text-[var(--color-brand-primary)] hover:bg-[var(--color-brand-primary-soft)]",
-  line: "bg-[var(--color-line-green)] text-white hover:opacity-90",
+  primary: "bg-brand-primary text-white hover:bg-brand-primary-hover shadow-sm",
+  secondary: "bg-bg-card text-text-primary border border-border-strong hover:bg-bg-card-hover",
+  ghost: "text-brand-primary hover:bg-brand-primary-soft",
+  line: "bg-line-green text-white hover:opacity-90 shadow-sm",
 }
 
 const sizes: Record<Size, string> = {
@@ -28,13 +25,7 @@ type Props = {
   className?: string
 }
 
-export function Button({
-  children,
-  variant = "primary",
-  size = "md",
-  href,
-  className,
-}: Props) {
+export function Button({ children, variant = "primary", size = "md", href, className }: Props) {
   const cls = clsx(
     "inline-flex items-center justify-center gap-2 rounded-lg font-semibold transition-colors",
     variants[variant],

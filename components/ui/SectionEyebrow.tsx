@@ -2,7 +2,7 @@ import type { ReactNode } from "react"
 
 export function SectionEyebrow({ children }: { children: ReactNode }) {
   return (
-    <p className="text-xs md:text-sm uppercase tracking-widest font-semibold mb-3 text-[var(--color-brand-primary)]">
+    <p className="font-mono text-xs md:text-sm uppercase tracking-widest text-brand-primary font-semibold mb-3">
       {children}
     </p>
   )

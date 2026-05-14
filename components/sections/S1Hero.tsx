@@ -19,14 +19,14 @@ export function S1Hero() {
               <span className="block">{line1}</span>
               <span className="block">
                 {parts[0]}
-                <span className="italic text-[var(--color-brand-primary)]">
+                <span className="italic text-brand-primary">
                   {highlight}
                 </span>
                 {parts[1] ?? ""}
               </span>
             </h1>
 
-            <p className="text-lg md:text-xl text-[var(--color-text-secondary)] leading-relaxed mb-8 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-text-secondary leading-relaxed mb-8 max-w-2xl mx-auto">
               {HERO.sub}
             </p>
 
@@ -36,7 +36,7 @@ export function S1Hero() {
                 <ArrowRight size={20} />
               </Button>
 
-              <p className="text-sm text-[var(--color-text-muted)]">
+              <p className="text-sm text-text-muted">
                 {HERO.trust}
               </p>
             </div>

@@ -6,7 +6,7 @@ import { RELEVANCE } from "@/lib/data"
 
 export function S2Relevance() {
   return (
-    <section className="py-20 md:py-30 bg-[var(--color-bg-surface)]">
+    <section className="py-20 md:py-30 bg-bg-surface">
       <Container>
         <ScrollReveal>
           <div className="max-w-3xl mx-auto">
@@ -22,7 +22,7 @@ export function S2Relevance() {
                   <span className="flex-shrink-0 mt-0.5 w-7 h-7 rounded-full bg-red-100 flex items-center justify-center">
                     <X size={14} strokeWidth={3} className="text-red-600" />
                   </span>
-                  <span className="text-lg text-[var(--color-text-primary)] leading-relaxed">
+                  <span className="text-lg text-text-primary leading-relaxed">
                     {text}
                   </span>
                 </li>

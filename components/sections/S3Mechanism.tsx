@@ -21,13 +21,13 @@ export function S3Mechanism() {
           {MECHANISM.map((s, i) => (
             <ScrollReveal key={s.n} delay={i * 0.1}>
               <Card className="h-full">
-                <div className="font-mono text-4xl md:text-5xl font-bold text-[var(--color-brand-primary)] mb-4">
+                <div className="font-mono text-4xl md:text-5xl font-bold text-brand-primary mb-4">
                   {s.n}
                 </div>
                 <h3 className="text-xl md:text-2xl font-bold mb-3">
                   {s.title}
                 </h3>
-                <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                <p className="text-text-secondary leading-relaxed">
                   {s.body}
                 </p>
               </Card>
@@ -36,7 +36,7 @@ export function S3Mechanism() {
         </div>
 
         <ScrollReveal delay={0.3}>
-          <blockquote className="mt-12 max-w-3xl mx-auto text-center text-xl md:text-2xl italic text-[var(--color-text-secondary)] border-l-4 border-[var(--color-brand-primary)] pl-6 md:border-l-0 md:pl-0">
+          <blockquote className="mt-12 max-w-3xl mx-auto text-center text-xl md:text-2xl italic text-text-secondary border-l-4 border-brand-primary pl-6 md:border-l-0 md:pl-0">
             &ldquo;{MECHANISM_CLOSING}&rdquo;
           </blockquote>
         </ScrollReveal>
