@@ -47,6 +47,7 @@ export function S6WhatsInside() {
                 <Gift size={20} className="text-brand-primary" />
               </span>
               <h3 className="text-2xl md:text-3xl font-bold">{BONUS.label}</h3>
+
             </div>
             <ul className="space-y-2.5">
               {BONUS.items.map((text, i) => (
