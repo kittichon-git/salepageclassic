@@ -1,6 +1,4 @@
-import { Check, ArrowRight } from "lucide-react"
-import { Container } from "@/components/ui/Container"
-import { Card } from "@/components/ui/Card"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow"
 import { ScrollReveal } from "@/components/shared/ScrollReveal"
@@ -10,79 +8,71 @@ const fmt = (v: number) => v.toLocaleString("th-TH")
 
 export function S8OfferStack() {
   return (
-    <section id="offer" className="py-20 md:py-30 border-t-2 border-text-primary">
-      <Container>
+    <section id="offer" className="relative mb-7 border-2 border-text-primary bg-bg-card shadow-[5px_5px_0_rgba(26,26,26,0.50)]">
+      <SectionEyebrow>S8 / OFFER STACK</SectionEyebrow>
+      <div className="px-7 md:px-10 pt-12 pb-8 md:pb-10">
         <ScrollReveal>
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <SectionEyebrow>S8 / OFFER STACK</SectionEyebrow>
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-4">
-              สิ่งที่คุณจะได้ทั้งหมด
-            </h2>
-            <p className="text-text-secondary text-lg">
-              มูลค่ารวมจริง · ราคาเปิดตัวจำกัด
-            </p>
-          </div>
+          <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
+            ทั้งหมดนี้ในราคาเดียว
+          </h2>
         </ScrollReveal>
 
-        {/* Value Stack Table */}
-        <ScrollReveal>
-          <Card className="max-w-3xl mx-auto p-0 overflow-hidden">
-            <ul>
+        <div className="grid grid-cols-1 lg:grid-cols-[0.95fr_1.05fr] gap-[18px] items-start">
+          {/* Offer visual — placeholder */}
+          <ScrollReveal>
+            <div className="aspect-[4/3] border-2 border-text-primary bg-bg-surface shadow-[3px_3px_0_rgba(26,26,26,0.45)] flex flex-col items-center justify-center gap-3 p-6">
+              <span className="font-mono text-xs uppercase tracking-widest text-text-muted text-center">
+                Offer Stack<br />Value Cards<br />Illustration
+              </span>
+            </div>
+          </ScrollReveal>
+
+          {/* Price card */}
+          <ScrollReveal delay={0.1}>
+            <div className="border-2 border-text-primary bg-bg-card shadow-[3px_3px_0_rgba(26,26,26,0.40)] p-5 md:p-6">
+              {/* Offer list */}
               {OFFER.map((item, i) => (
-                <li
+                <div
                   key={i}
-                  className={
-                    "flex items-center gap-4 p-5 md:p-6" +
-                    (i < OFFER.length - 1 ? " border-b border-border-subtle" : "")
-                  }
+                  className="flex justify-between gap-3 py-3 border-b border-dashed border-text-primary/25 font-bold"
                 >
-                  <span className="flex-shrink-0 w-6 h-6 rounded-full bg-brand-primary-soft flex items-center justify-center">
-                    <Check size={13} strokeWidth={3} className="text-brand-primary" />
-                  </span>
-                  <span className="flex-1 text-text-primary">{item.label}</span>
-                  <span className="font-mono font-semibold text-text-secondary text-sm shrink-0">
-                    ฿{fmt(item.value)}
-                  </span>
-                </li>
+                  <span>{item.label}</span>
+                  <strong className="font-mono shrink-0">฿{fmt(item.value)}</strong>
+                </div>
               ))}
-            </ul>
 
-            {/* Total value row */}
-            <div className="flex items-center gap-4 p-5 md:p-6 bg-bg-surface border-t-2 border-border-strong">
-              <span className="flex-1 font-bold text-text-primary">มูลค่ารวมทั้งหมด</span>
-              <span className="font-mono font-bold text-text-primary">฿{fmt(PRICE.total)}</span>
-            </div>
-          </Card>
-        </ScrollReveal>
+              {/* Total */}
+              <div className="flex justify-between gap-3 py-3 text-xl font-bold border-b-2 border-text-primary">
+                <span>รวมมูลค่า</span>
+                <strong className="font-mono">฿{fmt(PRICE.total)}</strong>
+              </div>
 
-        {/* Price block */}
-        <ScrollReveal delay={0.15}>
-          <div className="mt-12 max-w-2xl mx-auto text-center">
-            <p className="font-mono text-xs md:text-sm uppercase tracking-widest text-text-muted mb-4">
-              ราคาเปิดตัว (ลดเฉพาะรอบแรก)
-            </p>
+              {/* Anchor price */}
+              <p className="mt-4 font-black text-sm text-text-secondary">
+                ราคา anchor:{" "}
+                <s className="font-mono">฿{fmt(PRICE.anchor)}</s>
+              </p>
 
-            <div className="flex items-baseline justify-center gap-4 mb-2 flex-wrap">
-              <span className="text-xl md:text-2xl text-text-muted line-through font-mono">
-                ฿{fmt(PRICE.anchor)}
-              </span>
-              <span className="text-5xl md:text-6xl font-black text-brand-primary font-mono">
-                ฿{fmt(PRICE.today)}
-              </span>
-            </div>
+              {/* Today price */}
+              <div className="flex items-baseline gap-3 mt-2 mb-4">
+                <span className="bg-brand-primary text-white font-black text-sm px-2 py-1">วันนี้</span>
+                <strong className="font-mono font-black text-[clamp(52px,8vw,72px)] leading-none text-text-primary">
+                  ฿{fmt(PRICE.today)}
+                </strong>
+              </div>
 
-            <div className="mt-8">
-              <Button variant="line" size="lg" href={HERO.ctaHref}>
-                สั่งซื้อผ่าน LINE
+              <p className="text-brand-primary font-bold text-sm mb-5">
+                จ่ายครั้งเดียว · เข้าถึงตลอดชีพ · เปิดอ่านบน LINE ได้ทุกที่
+              </p>
+
+              <Button variant="line" size="lg" href={HERO.ctaHref} className="w-full justify-center">
+                จ่าย ฿{fmt(PRICE.today)} ผ่าน LINE
                 <ArrowRight size={20} />
               </Button>
-              <p className="text-text-muted text-sm mt-4">
-                จ่ายเงินผ่าน LINE · รับอีบุ๊กทันที · คืนเงิน 30 วันถ้าไม่พอใจ
-              </p>
             </div>
-          </div>
-        </ScrollReveal>
-      </Container>
+          </ScrollReveal>
+        </div>
+      </div>
     </section>
   )
 }

@@ -1,44 +1,36 @@
-import { Plus } from "lucide-react"
-import { Container } from "@/components/ui/Container"
+import { ChevronDown } from "lucide-react"
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow"
 import { ScrollReveal } from "@/components/shared/ScrollReveal"
 import { FAQ } from "@/lib/data"
 
 export function S9FAQ() {
   return (
-    <section id="faq" className="py-20 md:py-30 bg-bg-surface border-t-2 border-text-primary">
-      <Container>
+    <section id="faq" className="relative mb-7 border-2 border-text-primary bg-bg-card shadow-[5px_5px_0_rgba(26,26,26,0.50)]">
+      <SectionEyebrow>FAQ</SectionEyebrow>
+      <div className="px-7 md:px-10 pt-12 pb-8 md:pb-10">
         <ScrollReveal>
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <SectionEyebrow>FAQ</SectionEyebrow>
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-              คำถามที่พบบ่อย
-            </h2>
-          </div>
+          <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
+            คำถามที่พบบ่อย
+          </h2>
         </ScrollReveal>
 
-        <div className="max-w-3xl mx-auto space-y-3">
+        <div className="grid gap-2.5">
           {FAQ.map((item, i) => (
             <ScrollReveal key={i} delay={i * 0.05}>
-              <details className="group bg-bg-card border-2 border-text-primary rounded-xl overflow-hidden">
-                <summary className="flex items-center justify-between gap-4 p-5 md:p-6 cursor-pointer list-none select-none">
-                  <span className="font-semibold text-text-primary text-base md:text-lg pr-2">
-                    {item.q}
-                  </span>
-                  <span className="shrink-0 w-7 h-7 rounded-full bg-brand-primary-soft flex items-center justify-center transition-transform duration-300 group-open:rotate-45">
-                    <Plus size={16} strokeWidth={2.5} className="text-brand-primary" />
-                  </span>
+              <details className="group border-2 border-text-primary bg-bg-card shadow-[2px_2px_0_rgba(26,26,26,0.45)]">
+                <summary className="flex items-center justify-between gap-4 px-4 py-4 cursor-pointer list-none select-none font-black">
+                  <span className="text-text-primary text-base md:text-lg pr-2">{item.q}</span>
+                  <ChevronDown
+                    size={18}
+                    className="shrink-0 transition-transform duration-200 group-open:rotate-180"
+                  />
                 </summary>
-                <div className="px-5 md:px-6 pb-5 md:pb-6 pt-0">
-                  <p className="text-text-secondary leading-relaxed border-t border-border-subtle pt-4">
-                    {item.a}
-                  </p>
-                </div>
+                <p className="px-4 pb-4 text-text-secondary leading-[1.65]">{item.a}</p>
               </details>
             </ScrollReveal>
           ))}
         </div>
-      </Container>
+      </div>
     </section>
   )
 }

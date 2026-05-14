@@ -1,65 +1,51 @@
 import { Check, X } from "lucide-react"
-import { Container } from "@/components/ui/Container"
-import { Card } from "@/components/ui/Card"
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow"
 import { ScrollReveal } from "@/components/shared/ScrollReveal"
 import { TRUST_FIT } from "@/lib/data"
 
 export function S5TrustFilter() {
   return (
-    <section className="py-20 md:py-30 bg-bg-surface border-t-2 border-text-primary">
-      <Container>
+    <section className="relative mb-7 border-2 border-text-primary bg-bg-card shadow-[5px_5px_0_rgba(26,26,26,0.50)]">
+      <SectionEyebrow>S5 / TRUST FILTER</SectionEyebrow>
+      <div className="px-7 md:px-10 pt-12 pb-8 md:pb-10">
         <ScrollReveal>
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <SectionEyebrow>S5 / TRUST FILTER</SectionEyebrow>
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-              เหมาะกับใคร และไม่เหมาะกับใคร
-            </h2>
-          </div>
+          <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
+            เหมาะกับใคร และไม่เหมาะกับใคร
+          </h2>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-[18px]">
           {/* For */}
           <ScrollReveal>
-            <Card className="h-full">
-              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-border-subtle">
-                <span className="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center shrink-0">
-                  <Check size={18} strokeWidth={3} className="text-green-700" />
-                </span>
-                <h3 className="text-xl md:text-2xl font-bold">เหมาะกับคุณ ถ้า</h3>
-              </div>
+            <div className="h-full border-2 border-text-primary bg-[#ecf8f3] shadow-[3px_3px_0_rgba(26,26,26,0.40)] p-5 md:p-6">
+              <h3 className="text-xl md:text-2xl font-bold mb-4">เหมาะกับคุณ ถ้า</h3>
               <ul className="space-y-3">
                 {TRUST_FIT.for.map((text, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <Check size={18} className="shrink-0 mt-0.5 text-success" />
+                  <li key={i} className="flex items-start gap-3 font-bold">
+                    <Check size={18} className="shrink-0 mt-0.5 text-success" strokeWidth={3} />
                     <span className="text-text-primary">{text}</span>
                   </li>
                 ))}
               </ul>
-            </Card>
+            </div>
           </ScrollReveal>
 
           {/* Not For */}
           <ScrollReveal delay={0.1}>
-            <Card className="h-full">
-              <div className="flex items-center gap-3 mb-6 pb-4 border-b border-border-subtle">
-                <span className="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center shrink-0">
-                  <X size={18} strokeWidth={3} className="text-red-700" />
-                </span>
-                <h3 className="text-xl md:text-2xl font-bold">ไม่เหมาะ ถ้า</h3>
-              </div>
+            <div className="h-full border-2 border-text-primary bg-[#fff3ec] shadow-[3px_3px_0_rgba(26,26,26,0.40)] p-5 md:p-6">
+              <h3 className="text-xl md:text-2xl font-bold mb-4">ไม่เหมาะ ถ้า</h3>
               <ul className="space-y-3">
                 {TRUST_FIT.notFor.map((text, i) => (
-                  <li key={i} className="flex items-start gap-3">
-                    <X size={18} className="shrink-0 mt-0.5 text-danger" />
+                  <li key={i} className="flex items-start gap-3 font-bold">
+                    <X size={18} className="shrink-0 mt-0.5 text-danger" strokeWidth={3} />
                     <span className="text-text-primary">{text}</span>
                   </li>
                 ))}
               </ul>
-            </Card>
+            </div>
           </ScrollReveal>
         </div>
-      </Container>
+      </div>
     </section>
   )
 }

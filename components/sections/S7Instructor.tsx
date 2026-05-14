@@ -1,63 +1,55 @@
-import { Container } from "@/components/ui/Container"
-import { Card } from "@/components/ui/Card"
-import { Badge } from "@/components/ui/Badge"
 import { SectionEyebrow } from "@/components/ui/SectionEyebrow"
 import { ScrollReveal } from "@/components/shared/ScrollReveal"
 import { INSTRUCTOR } from "@/lib/data"
 
 export function S7Instructor() {
   return (
-    <section className="py-20 md:py-30 bg-bg-surface border-t-2 border-text-primary">
-      <Container>
+    <section className="relative mb-7 border-2 border-text-primary bg-bg-card shadow-[5px_5px_0_rgba(26,26,26,0.50)]">
+      <SectionEyebrow>S7 / INSTRUCTOR</SectionEyebrow>
+      <div className="px-7 md:px-10 pt-12 pb-8 md:pb-10">
         <ScrollReveal>
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <SectionEyebrow>S7 / INSTRUCTOR</SectionEyebrow>
-            <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-              ใครเขียน — และทำไมต้องเชื่อ
-            </h2>
-          </div>
+          <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
+            ใครเขียน — และทำไมต้องเชื่อ
+          </h2>
         </ScrollReveal>
 
         <ScrollReveal>
-          <Card className="max-w-4xl mx-auto">
-            <div className="flex flex-col md:flex-row gap-6 md:gap-8 items-start">
-              {/* Avatar initials */}
-              <div className="shrink-0 mx-auto md:mx-0">
-                <div
-                  aria-label={INSTRUCTOR.name}
-                  className="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-brand-primary text-white flex items-center justify-center font-heading font-black text-3xl md:text-4xl shadow-md"
-                >
-                  {INSTRUCTOR.initials}
-                </div>
-              </div>
-
-              {/* Bio */}
-              <div className="flex-1 text-center md:text-left">
-                <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-5">
-                  {INSTRUCTOR.name}
-                </h3>
-
-                <div className="space-y-4">
-                  {INSTRUCTOR.paras.map((p, i) => (
-                    <p key={i} className="text-text-secondary leading-relaxed">
-                      {p}
-                    </p>
-                  ))}
-                </div>
-
-                {/* Tags */}
-                {INSTRUCTOR.tags.length > 0 && (
-                  <div className="flex flex-wrap gap-2 mt-6 justify-center md:justify-start">
-                    {INSTRUCTOR.tags.map((t, i) => (
-                      <Badge key={i}>{t}</Badge>
-                    ))}
-                  </div>
-                )}
+          <div className="border-2 border-text-primary bg-bg-card shadow-[3px_3px_0_rgba(26,26,26,0.40)] p-5 md:p-6 grid grid-cols-1 md:grid-cols-[160px_1fr] gap-6 items-center">
+            {/* Portrait */}
+            <div className="flex-shrink-0 mx-auto md:mx-0">
+              <div
+                aria-label={INSTRUCTOR.name}
+                className="w-[150px] h-[150px] border-2 border-text-primary bg-brand-primary text-white flex items-center justify-center font-heading font-black text-5xl shadow-[3px_3px_0_rgba(218,119,86,0.85)]"
+              >
+                {INSTRUCTOR.initials}
               </div>
             </div>
-          </Card>
+
+            {/* Bio */}
+            <div>
+              <p className="text-xl md:text-2xl font-black text-text-primary leading-[1.45] mb-3">
+                {INSTRUCTOR.paras[0]}
+              </p>
+              {INSTRUCTOR.paras.slice(1).map((p, i) => (
+                <p key={i} className="text-text-secondary leading-[1.7] mb-2">{p}</p>
+              ))}
+
+              {INSTRUCTOR.tags.length > 0 && (
+                <div className="flex flex-wrap gap-2.5 mt-4">
+                  {INSTRUCTOR.tags.map((t, i) => (
+                    <span
+                      key={i}
+                      className="border-2 border-text-primary bg-[#e8c56d] text-text-primary font-black text-sm px-2.5 py-1.5"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
         </ScrollReveal>
-      </Container>
+      </div>
     </section>
   )
 }
