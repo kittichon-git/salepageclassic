@@ -1,44 +1,56 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand */
-  --color-brand-primary: #00d4c8;
-  --color-brand-primary-dark: #00a89c;
-  --color-brand-accent: #ffb800;
+  /* Brand — Anthropic coral (จาก cc.aiflowlab.co --accent #da7756) */
+  --color-brand-primary: #da7756;
+  --color-brand-primary-hover: #c4684a;
+  --color-brand-primary-soft: #f4c5b1;
   --color-line-green: #00B900;
 
-  /* Surfaces — dark mode */
-  --color-bg-base: #0a0e1a;
-  --color-bg-elevated: #131826;
-  --color-bg-card: #1a2033;
-  --color-bg-card-hover: #232a40;
+  /* Surfaces — LIGHT mode warm cream */
+  --color-bg-base: #f5f5f0;
+  --color-bg-elevated: #ffffff;
+  --color-bg-surface: #eaeae5;
+  --color-bg-card: #ffffff;
+  --color-bg-card-hover: #fafaf7;
 
   /* Text */
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #b8c0d0;
-  --color-text-muted: #6b7689;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #555555;
+  --color-text-muted: #888888;
+  --color-text-inverse: #f5f5f0;
 
   /* Semantic */
-  --color-success: #00d4a8;
-  --color-warning: #ff9a3c;
-  --color-danger: #ff5c5c;
+  --color-success: #2e7d32;
+  --color-warning: #ed6c02;
+  --color-danger: #c62828;
 
   /* Borders */
-  --color-border-subtle: #232a40;
-  --color-border-strong: #3a4259;
+  --color-border-subtle: #e8e8e3;
+  --color-border-strong: #d4d4d4;
 
-  /* Typography */
-  --font-thai: var(--font-noto-sans-thai), system-ui, sans-serif;
-  --font-latin: var(--font-inter), system-ui, sans-serif;
+  /* Typography — ตรง cc.aiflowlab.co */
+  --font-heading: var(--font-kanit), sans-serif;
+  --font-body: var(--font-bai-jamjuree), sans-serif;
+  --font-mono: var(--font-jetbrains-mono), monospace;
 }
 
 html,
 body {
   background: var(--color-bg-base);
   color: var(--color-text-primary);
-  font-family: var(--font-thai);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
 }
 
 @media (prefers-reduced-motion: no-preference) {
