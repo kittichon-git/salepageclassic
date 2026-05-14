@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @theme {
-  /* Backgrounds: warm cream layered */
-  --color-bg-deep: #e9e3d4;
-  --color-bg-base: #f2ecdd;
-  --color-bg-elevated: #f8f3e6;
-  --color-bg-surface: #ede7d6;
-  --color-bg-card: #f8f3e6;
-  --color-bg-card-hover: #faf6eb;
+  /* Backgrounds: near-neutral cream (de-saturated from P13) */
+  --color-bg-deep: #eceae6;
+  --color-bg-base: #f5f5f0;
+  --color-bg-elevated: #fafaf7;
+  --color-bg-surface: #f0efeb;
+  --color-bg-card: #fafaf7;
+  --color-bg-card-hover: #ffffff;
 
   /* Text: warm dark, not pure black */
   --color-text-primary: #3a3530;
@@ -44,7 +44,7 @@ html {
 
 body {
   background-color: var(--color-bg-deep);
-  background-image: radial-gradient(circle at 1px 1px, rgba(58, 53, 48, 0.025) 1px, transparent 0);
+  background-image: radial-gradient(circle at 1px 1px, rgba(58, 53, 48, 0.015) 1px, transparent 0);
   background-size: 42px 42px;
   color: var(--color-text-primary);
   font-family: var(--font-body);
