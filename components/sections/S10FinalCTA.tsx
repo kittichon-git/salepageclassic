@@ -30,7 +30,7 @@ export function S10FinalCTA() {
         <ScrollReveal>
           <LineChart size={42} className="text-brand-primary mx-auto mb-4" />
 
-          <h2 className="text-4xl md:text-6xl font-heading font-black leading-[1.05] tracking-tight text-white mb-6 max-w-3xl mx-auto">
+          <h2 className="text-[32px] md:text-[48px] font-heading font-[800] leading-[1.15] tracking-[-0.5px] text-white mb-6 max-w-3xl mx-auto">
             {FINAL_CTA.headline}
           </h2>
 

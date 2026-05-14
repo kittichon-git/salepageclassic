@@ -35,7 +35,7 @@ export function S1Hero() {
               R-MOTRA SALE PAGE · MOBILE-FIRST
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-[clamp(40px,6.4vw,84px)] font-black leading-[0.98] tracking-tight mb-5">
+            <h1 className="text-[32px] md:text-[48px] font-[800] leading-[1.15] tracking-[-0.5px] mb-5">
               <span className="block">{line1}</span>
               <span className="block">
                 {parts[0]}

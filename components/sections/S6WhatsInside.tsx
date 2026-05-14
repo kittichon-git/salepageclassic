@@ -10,7 +10,7 @@ export function S6WhatsInside() {
       <SectionEyebrow>S6 / WHAT&apos;S INSIDE</SectionEyebrow>
       <div className="px-7 md:px-10 pt-12 pb-8 md:pb-10">
         <ScrollReveal>
-          <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8">
+          <h2 className="text-[36px] font-[800] leading-[1.2] mb-8">
             ข้างในมีอะไร — 7 ภาค 24 บท
           </h2>
         </ScrollReveal>

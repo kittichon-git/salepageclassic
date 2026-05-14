@@ -23,7 +23,7 @@ const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-jetbrains-mono",
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "700", "800"],
 })
 
 const SITE_URL = "https://salepageclassic.vercel.app"
